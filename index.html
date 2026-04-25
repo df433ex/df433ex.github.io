@@ -86,6 +86,35 @@
 
     .nav-right {
       justify-self: end;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-mute);
+      padding-left: 22px;
+      border-left: 1px solid var(--line);
+    }
+
+    .lang-toggle a {
+      color: var(--ink-mute);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .lang-toggle a:hover {
+      color: var(--ink);
+    }
+
+    .lang-toggle .active {
+      color: var(--ink);
+      font-weight: 600;
     }
 
     .cv-link {
@@ -562,6 +591,11 @@
       .nav-right {
         order: 1;
         justify-self: end;
+        gap: 18px;
+      }
+
+      .lang-toggle {
+        padding-left: 14px;
       }
 
       section.hero {
@@ -609,6 +643,11 @@
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
+        </div>
+        <div class="lang-toggle">
+          <span class="active">EN</span>
+          <span>/</span>
+          <a href="it/">IT</a>
         </div>
       </div>
     </div>
