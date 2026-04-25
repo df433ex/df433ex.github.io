@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curriculum Vitae — Diego Fasano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3ede5;
+    --bg-alt: #ebe3d8;
+    --ink: #161513;
+    --ink-soft: #6b655e;
+    --ink-mute: #9a948b;
+    --accent: #d96a3a;
+    --line: #ddd4c5;
+    --card: #faf6f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 56px; }
+
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(243,237,229,0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  nav.top .row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 28px 0;
+  }
+  .brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .brand span { color: var(--accent); }
+  .back {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  .back:hover { color: var(--ink); }
+
+  section.cv { padding: 80px 0 60px; }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  h1.title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--ink);
+    max-width: 800px;
+  }
+  h1.title em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--ink-mute);
+  }
+  .meta {
+    color: var(--ink-soft);
+    font-size: 17px;
+    margin-top: 24px;
+    max-width: 640px;
+    line-height: 1.65;
+  }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 28px;
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  .meta-row strong {
+    color: var(--ink);
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .frame {
+    margin-top: 60px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 30px 60px -32px rgba(22,21,19,0.18);
+  }
+  .frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px -12px rgba(22,21,19,0.18);
+  }
+
+  .actions {
+    display: flex; gap: 18px; flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px;
+    background: var(--ink); color: #faf6f0;
+    border-radius: 999px;
+    font-weight: 500; font-size: 15px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .btn:hover { background: #000; transform: translateY(-1px); }
+  .btn.ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+  .btn.ghost:hover {
+    background: var(--bg-alt);
+    border-color: var(--ink-soft);
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    margin-top: 80px;
+    padding: 40px 0;
+  }
+  .foot-row {
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--ink-mute); font-size: 14px;
+  }
+
+  @media (max-width: 860px) {
+    .wrap { padding: 0 24px; }
+    .frame { padding: 18px; }
+    section.cv { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap row">
+    <a href="../" class="brand">Diego<span>.</span></a>
+    <a href="../" class="back">← Back to portfolio</a>
+  </div>
+</nav>
+
+<section class="cv">
+  <div class="wrap">
+    <div class="eyebrow">Curriculum Vitae</div>
+    <h1 class="title">Diego Fasano <em>— CV</em></h1>
+    <p class="meta">
+      Second-year BSc Economics student at the University of Exeter, currently tracking
+      First Class Honours. Italian native, fluent English, with experience in real estate,
+      hospitality and operations roles across the UK.
+    </p>
+    <div class="meta-row">
+      <div>
+        <strong>Updated</strong>
+        April 2026
+      </div>
+      <div>
+        <strong>Based</strong>
+        Cardiff / Exeter, UK
+      </div>
+      <div>
+        <strong>Open to</strong>
+        Placements in Milan, Sept 2026
+      </div>
+    </div>
+
+    <div class="frame">
+      <img src="../images/cv.png" alt="Diego Fasano — Curriculum Vitae">
+    </div>
+
+    <div class="actions">
+      <a href="../Diego_Fasano_CV.pdf" download class="btn">Download PDF</a>
+      <a href="../" class="btn ghost">← Back to portfolio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <a href="../" class="brand">Diego<span>.</span></a>
+    <div>© 2026 Diego Fasano. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
